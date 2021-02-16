@@ -1,0 +1,67 @@
+{
+  "name": "node-express-microservice",
+  "version": "0.0.1",
+  "description": "Template for microservices",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "start": "NODE_ENV=production node ./bin/www",
+    "start:dev": "NODE_ENV=dev nodemon ./bin/www",
+    "test": "NODE_ENV=test jest --detectOpenHandles --coverage",
+    "lint": "eslint '**/*.js'"
+  },
+  "pre-push": [
+    "test",
+    "eslint"
+  ],
+  "keywords": [
+    "api",
+    "nodeJS"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@hapi/boom": "^9.1.1",
+    "bcrypt": "^5.0.0",
+    "bluebird": "^3.7.2",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "helmet": "^4.4.1",
+    "jsonwebtoken": "^8.5.1",
+    "lodash.unionwith": "^4.6.0",
+    "nodemon": "^2.0.7"
+  },
+  "engines": {
+    "node": "14.x"
+  },
+  "devDependencies": {
+    "eslint": "^7.19.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jest": "^24.1.3",
+    "jest": "^26.6.3",
+    "jest-circus": "^26.6.3",
+    "jest-sonar-reporter": "^2.0.0",
+    "mongodb-memory-server": "^6.9.3",
+    "nock": "^13.0.7",
+    "supertest": "^6.1.3"
+  },
+  "jest": {
+    "bail": true,
+    "testEnvironment": "<rootDir>/test/mongo-test-environment",
+    "setupFilesAfterEnv": [
+      "<rootDir>/test/bootstrap-jest.js"
+    ],
+    "coverageReporters": [
+      "json",
+      "text-summary",
+      "lcov",
+      "clover"
+    ],
+    "collectCoverage": true,
+    "collectCoverageFrom": [],
+    "coveragePathIgnorePatterns": [],
+    "testRunner": "jest-circus/runner"
+  }
+}
