@@ -45,6 +45,7 @@
     "jest-sonar-reporter": "^2.0.0",
     "mongodb-memory-server": "^6.9.3",
     "nock": "^13.0.7",
+    "node-mongoose-models": "git+https://github.com/soker90/node-mongoose-models.git",
     "supertest": "^6.1.3"
   },
   "jest": {

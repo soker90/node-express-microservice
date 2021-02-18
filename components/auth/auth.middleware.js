@@ -1,4 +1,4 @@
-const { AccountModel } = require('arroyo-erp-models');
+const { AccountModel } = require('node-mongoose-models');
 const errorHandlers = require('../error-handlers');
 const { verifyToken, signToken } = require('./auth.service');
 const { ExpiredToken, InvalidToken } = require('../../errors/user.errors');
@@ -39,8 +39,8 @@ const checkAuthorization = async (req, res, next) => {
     const token = req.headers.authorization?.split('Bearer ')?.[1];
     if (!token) throw new InvalidToken();
     const dataToken = await verifyToken(token);
-    const userExist = await AccountModel.exists({ username: dataToken?.user });
-
+    const userExist = await AccountModel?.exists({ username: dataToken?.user });
+    
     if (userExist) refreshToken(res, dataToken);
     else throw new InvalidToken();
 

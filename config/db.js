@@ -1,4 +1,4 @@
-const models = require('arroyo-erp-models');
+const models = require('node-mongoose-models');
 
 const {
   user,
