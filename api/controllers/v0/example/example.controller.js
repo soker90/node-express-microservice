@@ -45,16 +45,15 @@ class ExamplesController {
   /**
    * Return example data
    */
-  examples(req, res) {
+  example(req, res) {
     logService.logInfo('[example] - Get example');
     Promise.resolve(req.params)
       .tap(this.exampleValidator.validateId)
       .then(this.exampleService.example)
-      .then(this.exampleAdapter.expampleResponse)
+      .then(this.exampleAdapter.exampleResponse)
       .then(data => res.send(data))
       .catch(this._handleError.bind(this, res));
   }
-
 }
 
 module.exports = ExamplesController;

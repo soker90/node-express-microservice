@@ -1,0 +1,47 @@
+{
+  "extends": "airbnb-base",
+  "plugins": [
+    "jest"
+  ],
+  "env": {
+    "node": true,
+    "jest/globals": true
+  },
+  "globals": {
+    "before": true,
+    "after": true,
+    "expect": true,
+    "chaiRequest": true,
+    "__MONGO_URI__": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2020
+  },
+  "rules": {
+    "no-plusplus": "off",
+    "import/no-unresolved": "off",
+    "curly": [2, "multi-or-nest"],
+    "arrow-parens": [2, "as-needed"],
+    "indent": [
+      "error",
+      2
+    ],
+    "jest/no-focused-tests": "error",
+    "jest/no-disabled-tests": "error",
+    "import/prefer-default-export": "off",
+    "no-underscore-dangle": "off",
+    "no-console": [2, { "allow": ["warn", "error"] }],
+    "import/named": "off",
+    "comma-dangle": [
+      "error",
+      {
+        "arrays": "always-multiline",
+        "objects": "always-multiline",
+        "imports": "always-multiline",
+        "exports": "always-multiline",
+        "functions": "ignore"
+      }
+    ],
+    "no-return-await": "off"
+  }
+}

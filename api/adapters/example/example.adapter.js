@@ -4,7 +4,7 @@
  * @returns {{example: string}}
  */
 const exampleResponse = example => ({
-  example: `${example.mmyNumber} - ${example.myString}`
+  example: `${example.myNumber} - ${example.myString}`,
 });
 
 module.exports = {
