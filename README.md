@@ -45,3 +45,8 @@ npm test
 ## Docker container
 
 See `Dockerfile` for more details.
+
+## Examples
+
+* [arroyo-erp-api](https://github.com/soker90/arroyo-erp-api)
+* [carpinteria-erp-api](https://github.com/soker90/carpinteria-erp-api)
