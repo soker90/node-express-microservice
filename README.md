@@ -1,4 +1,10 @@
 # node-express-microservice
+![GitHub](https://img.shields.io/github/license/soker90/node-express-microservice)
+![](https://github.com/soker90/node-express-microservice/workflows/Node.js%20CI/badge.svg)
+[![dependencies Status](https://david-dm.org/soker90/node-express-microservice/status.svg)](https://david-dm.org/soker90/node-express-microservice)
+[![devDependencies Status](https://david-dm.org/soker90/node-express-microservice/dev-status.svg)](https://david-dm.org/soker90/node-express-microservice?type=dev)
+[![codecov](https://codecov.io/gh/soker90/node-express-microservice/branch/master/graph/badge.svg)](https://codecov.io/gh/soker90/node-express-microservice)
+
 
 This repository contains a API Microservice Starter.
 
