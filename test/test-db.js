@@ -1,7 +1,5 @@
 const mongooseOpts = {
-  useCreateIndex: true,
   useNewUrlParser: true,
-  useFindAndModify: false,
   useUnifiedTopology: true,
 };
 
